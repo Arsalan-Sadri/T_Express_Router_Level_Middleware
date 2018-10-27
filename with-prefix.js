@@ -7,7 +7,10 @@ router.use("/user/:id", (req, res) => {
     res.send(req.params.id);
 });
 
-app.use("/contact", router);
+// the next line as as same as this: app.use(router);
+app.use("/", router);           // http://localhost:8080/user/bomshakalaka
+app.use("/contact", router);    // http://localhost:8080/contact/user/bomshakalaka
+app.use("/profile", router);    // http://localhost:8080/profile/user/bomshakalaka
 
 const PORT = process.env.PORT || 8080;
 const host = "localhost";
