@@ -4,10 +4,10 @@ const router = express.Router();
 
 router.use("/user/:id", (req, res) => {
     console.log(`"Request method: ${req.method}"`);
-    res.send("Welcome to router middleware");
-})
+    res.send(req.params.id);
+});
 
-app.use(router);
+app.use("/contact", router);
 
 const PORT = process.env.PORT || 8080;
 const host = "localhost";
