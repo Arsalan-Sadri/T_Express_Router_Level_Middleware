@@ -7,7 +7,7 @@ router.use("/user/:id", (req, res) => {
     res.send(req.params.id);
 });
 
-// the next line as as same as this: app.use(router);
+// the next line is as same as this: app.use(router);
 app.use("/", router);           // http://localhost:8080/user/bomshakalaka
 app.use("/contact", router);    // http://localhost:8080/contact/user/bomshakalaka
 app.use("/profile", router);    // http://localhost:8080/profile/user/bomshakalaka
